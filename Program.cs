@@ -156,49 +156,49 @@ void Print ( int[,] array)
 // 34(1,0,0) 41(1,1,0)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
-Console.Write("Введите количество строк массива - ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите количество столбцов массива - ");
-int b = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите количество рядов массива - ");
-int q = Convert.ToInt32(Console.ReadLine());
-int[,,] array= new int [a,b,q];
-for (int i=0; i<array.GetLength(0); i++)
-{
-    for (int j=0; j<array.GetLength(1); j++)
-    {
-        for (int k=0; k<array.GetLength(2); k++)
-        {
-            int z=new Random().Next(10, 100);
-            for (int e=0; e<=i; e++)
-            {
-                for (int r=0; r<=j; r++)
-                {
-                    for (int f=0; f<=k; f++)
-                    {
-                        if (z==array[e,r,f])
-                        {
-                            z=new Random().Next(10, 100);
-                        }
-                    }
-                }
-            }
-            array[i,j,k]=z;
-        }
-    }
-}
-for (int u=0; u<array.GetLength(0); u++)
-{
-    for (int g=0; g<array.GetLength(1); g++)
-    {
-        for (int y=0; y<array.GetLength(2); y++)
-        {
-            Console.Write($"{array[u,g,y]} ({u}, {g}, {y}); ");
-        }
-        Console.WriteLine(" ");
-    }
-    Console.WriteLine(" ");
-}
+// Console.Write("Введите количество строк массива - ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество столбцов массива - ");
+// int b = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество рядов массива - ");
+// int q = Convert.ToInt32(Console.ReadLine());
+// int[,,] array= new int [a,b,q];
+// for (int i=0; i<array.GetLength(0); i++)
+// {
+//     for (int j=0; j<array.GetLength(1); j++)
+//     {
+//         for (int k=0; k<array.GetLength(2); k++)
+//         {
+//             int z=new Random().Next(10, 100);
+//             for (int e=0; e<=i; e++)
+//             {
+//                 for (int r=0; r<=j; r++)
+//                 {
+//                     for (int f=0; f<=k; f++)
+//                     {
+//                         if (z==array[e,r,f])
+//                         {
+//                             z=new Random().Next(10, 100);
+//                         }
+//                     }
+//                 }
+//             }
+//             array[i,j,k]=z;
+//         }
+//     }
+// }
+// for (int u=0; u<array.GetLength(0); u++)
+// {
+//     for (int g=0; g<array.GetLength(1); g++)
+//     {
+//         for (int y=0; y<array.GetLength(2); y++)
+//         {
+//             Console.Write($"{array[u,g,y]} ({u}, {g}, {y}); ");
+//         }
+//         Console.WriteLine(" ");
+//     }
+//     Console.WriteLine(" ");
+// }
 
 
 
@@ -208,3 +208,32 @@ for (int u=0; u<array.GetLength(0); u++)
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
+
+int [,] arr = new int [4,4];
+Console.Write("Введите начальное значение - ");
+int f = Convert.ToInt32(Console.ReadLine());
+arr[0,0]=f;
+for (int i=1; i<4; i++)
+{
+    arr[0,i]=arr[0,i-1]+1; //0;1 4, 0;2 5, 0;3 6,
+}
+for (int j=1; j<4 ; j++)
+{
+    arr[j,3]=arr[j-1,3]+1;  // 1;3 7, 
+}
+for (int k=2; k>-1; k=k-1)
+{
+    arr[3,k]=arr[3,k+1]+1;
+}
+for (int m=2; m>0; m=m-1)
+{
+    arr[m,0]=arr[m+1,0]+1;
+}
+for (int y=1; y<3; y++)
+{
+    arr[1,y]=arr[1,y-1]+1;
+}
+arr[2,2]=arr[1,2]+1;
+arr[2,1]=arr[2,2]+1;
+Print(arr);
+
