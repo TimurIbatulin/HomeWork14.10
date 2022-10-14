@@ -33,35 +33,35 @@ void Print ( int[,] array)
     }
 }
 
-// Console.Write("Введите количество строк массива - ");
-// int y = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите количество столбцов массива - ");
-// int t = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите нижнее значение диапазона случайных чисел для наполнения массива - ");
-// int q = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите верхнее значение диапазона случайных чисел для наполнения массива - ");
-// int w = Convert.ToInt32(Console.ReadLine());
-// int [,]wert=new int[y,t];
-// FillArray(wert, q, w);
-// Print(wert);
-// for (int k=0; k<wert.GetLength(0); k++)
-// {
-//     for (int l=0; l<wert.GetLength(1); l++)
-//     {
-//         int sum=wert[k,l];
-//         for (int e=l+1;e<wert.GetLength(1); e++)
-//         {
-//             if (sum<wert[k,e])
-//             {
-//                 int temp=wert[k,l];
-//                 wert[k,l]=wert[k,e];
-//                 wert[k,e]=temp;
-//             }
-//         }
-//     }
-// }
-// Console.WriteLine(" ");
-// Print(wert);
+Console.Write("Введите количество строк массива - ");
+int y = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов массива - ");
+int t = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите нижнее значение диапазона случайных чисел для наполнения массива - ");
+int q = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите верхнее значение диапазона случайных чисел для наполнения массива - ");
+int w = Convert.ToInt32(Console.ReadLine());
+int [,]wert=new int[y,t];
+FillArray(wert, q, w);
+Print(wert);
+for (int k=0; k<wert.GetLength(0); k++)
+{
+    for (int l=0; l<wert.GetLength(1); l++)
+    {
+        int sum=wert[k,l];
+        for (int e=l+1;e<wert.GetLength(1); e++)
+        {
+            if (sum<wert[k,e])
+            {
+                int temp=wert[k,l];
+                wert[k,l]=wert[k,e];
+                wert[k,e]=temp;
+            }
+        }
+    }
+}
+Console.WriteLine(" ");
+Print(wert);
 
 
 
@@ -73,34 +73,34 @@ void Print ( int[,] array)
 // 5 2 6 7
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
-// Console.Write("Введите количество строк массива - ");
-// int y = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите количество столбцов массива - ");
-// int t = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите нижнее значение диапазона случайных чисел для наполнения массива - ");
-// int q = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите верхнее значение диапазона случайных чисел для наполнения массива - ");
-// int w = Convert.ToInt32(Console.ReadLine());
-// int [,]wert=new int[y,t];
-// FillArray(wert, q, w);
-// Print(wert);
-// int sum=0;
-// int er=1000000;
-// int str=0;
-// for (int k=0; k<wert.GetLength(0); k++)
-// {
-//     for (int l=0; l<wert.GetLength(1); l++)
-//     {
-//         sum=sum+wert[k,l];
-//     }
-//     if (sum<er)
-//     {
-//         er=sum;
-//         str=k;
-//     }
-//     sum=0;
-// }
-// Console.Write($"Наименьшая сумма элементов находится в строке {str+1} и равна {er}");
+Console.Write("Введите количество строк массива - ");
+int y = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов массива - ");
+int t = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите нижнее значение диапазона случайных чисел для наполнения массива - ");
+int q = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите верхнее значение диапазона случайных чисел для наполнения массива - ");
+int w = Convert.ToInt32(Console.ReadLine());
+int [,]wert=new int[y,t];
+FillArray(wert, q, w);
+Print(wert);
+int sum=0;
+int er=1000000;
+int str=0;
+for (int k=0; k<wert.GetLength(0); k++)
+{
+    for (int l=0; l<wert.GetLength(1); l++)
+    {
+        sum=sum+wert[k,l];
+    }
+    if (sum<er)
+    {
+        er=sum;
+        str=k;
+    }
+    sum=0;
+}
+Console.Write($"Наименьшая сумма элементов находится в строке {str+1} и равна {er}");
 
 
 // Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
@@ -111,41 +111,41 @@ void Print ( int[,] array)
 // 18 20
 // 15 18
 
-// Console.Write("Введите количество строк массива - ");
-// int y = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите количество столбцов массива - ");
-// int t = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите нижнее значение диапазона случайных чисел для наполнения массива - ");
-// int q = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите верхнее значение диапазона случайных чисел для наполнения массива - ");
-// int w = Convert.ToInt32(Console.ReadLine());
-// int [,]wert=new int[y,t];
-// int [,]arr=new int [y,t];
-// int [,]war=new int [y,t];
-// FillArray(wert, q, w);
-// FillArray(arr, q, w);
-// Print(wert);
-// Console.WriteLine(" ");
-// Print(arr);
+Console.Write("Введите количество строк массива - ");
+int y = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов массива - ");
+int t = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите нижнее значение диапазона случайных чисел для наполнения массива - ");
+int q = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите верхнее значение диапазона случайных чисел для наполнения массива - ");
+int w = Convert.ToInt32(Console.ReadLine());
+int [,]wert=new int[y,t];
+int [,]arr=new int [y,t];
+int [,]war=new int [y,t];
+FillArray(wert, q, w);
+FillArray(arr, q, w);
+Print(wert);
+Console.WriteLine(" ");
+Print(arr);
 
-// for (int k=0; k<wert.GetLength(1); k++)
-// {
-//     int b=-1;
-//     for (int z=0; z<wert.GetLength(0); z++)
-//     {
-//         int j=0;
-//         b++;
-//         int factor=0;
-//         for (int i=0; i<wert.GetLength(1); i++)
-//         {
-//             factor=wert[z,j]*arr[j,z];
-//             j++;
-//             war[b,k]=war[b,k]+factor;
-//         }
-//     }
-// }
-// Console.WriteLine(" ");
-// Print(war);
+for (int k=0; k<wert.GetLength(1); k++)
+{
+    int b=-1;
+    for (int z=0; z<wert.GetLength(0); z++)
+    {
+        int j=0;
+        b++;
+        int factor=0;
+        for (int i=0; i<wert.GetLength(1); i++)
+        {
+            factor=wert[z,j]*arr[j,z];
+            j++;
+            war[b,k]=war[b,k]+factor;
+        }
+    }
+}
+Console.WriteLine(" ");
+Print(war);
 
 
 
@@ -156,49 +156,49 @@ void Print ( int[,] array)
 // 34(1,0,0) 41(1,1,0)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
-// Console.Write("Введите количество строк массива - ");
-// int a = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите количество столбцов массива - ");
-// int b = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите количество рядов массива - ");
-// int q = Convert.ToInt32(Console.ReadLine());
-// int[,,] array= new int [a,b,q];
-// for (int i=0; i<array.GetLength(0); i++)
-// {
-//     for (int j=0; j<array.GetLength(1); j++)
-//     {
-//         for (int k=0; k<array.GetLength(2); k++)
-//         {
-//             int z=new Random().Next(10, 100);
-//             for (int e=0; e<=i; e++)
-//             {
-//                 for (int r=0; r<=j; r++)
-//                 {
-//                     for (int f=0; f<=k; f++)
-//                     {
-//                         if (z==array[e,r,f])
-//                         {
-//                             z=new Random().Next(10, 100);
-//                         }
-//                     }
-//                 }
-//             }
-//             array[i,j,k]=z;
-//         }
-//     }
-// }
-// for (int u=0; u<array.GetLength(0); u++)
-// {
-//     for (int g=0; g<array.GetLength(1); g++)
-//     {
-//         for (int y=0; y<array.GetLength(2); y++)
-//         {
-//             Console.Write($"{array[u,g,y]} ({u}, {g}, {y}); ");
-//         }
-//         Console.WriteLine(" ");
-//     }
-//     Console.WriteLine(" ");
-// }
+Console.Write("Введите количество строк массива - ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов массива - ");
+int b = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество рядов массива - ");
+int q = Convert.ToInt32(Console.ReadLine());
+int[,,] array= new int [a,b,q];
+for (int i=0; i<array.GetLength(0); i++)
+{
+    for (int j=0; j<array.GetLength(1); j++)
+    {
+        for (int k=0; k<array.GetLength(2); k++)
+        {
+            int z=new Random().Next(10, 100);
+            for (int e=0; e<=i; e++)
+            {
+                for (int r=0; r<=j; r++)
+                {
+                    for (int f=0; f<=k; f++)
+                    {
+                        if (z==array[e,r,f])
+                        {
+                            z=new Random().Next(10, 100);
+                        }
+                    }
+                }
+            }
+            array[i,j,k]=z;
+        }
+    }
+}
+for (int u=0; u<array.GetLength(0); u++)
+{
+    for (int g=0; g<array.GetLength(1); g++)
+    {
+        for (int y=0; y<array.GetLength(2); y++)
+        {
+            Console.Write($"{array[u,g,y]} ({u}, {g}, {y}); ");
+        }
+        Console.WriteLine(" ");
+    }
+    Console.WriteLine(" ");
+}
 
 
 
