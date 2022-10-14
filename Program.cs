@@ -33,35 +33,35 @@ void Print ( int[,] array)
     }
 }
 
-Console.Write("Введите количество строк массива - ");
-int y = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите количество столбцов массива - ");
-int t = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите нижнее значение диапазона случайных чисел для наполнения массива - ");
-int q = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите верхнее значение диапазона случайных чисел для наполнения массива - ");
-int w = Convert.ToInt32(Console.ReadLine());
-int [,]wert=new int[y,t];
-FillArray(wert, q, w);
-Print(wert);
-for (int k=0; k<wert.GetLength(0); k++)
-{
-    for (int l=0; l<wert.GetLength(1); l++)
-    {
-        int sum=wert[k,l];
-        for (int e=l+1;e<wert.GetLength(1); e++)
-        {
-            if (sum<wert[k,e])
-            {
-                int temp=wert[k,l];
-                wert[k,l]=wert[k,e];
-                wert[k,e]=temp;
-            }
-        }
-    }
-}
-Console.WriteLine(" ");
-Print(wert);
+// Console.Write("Введите количество строк массива - ");
+// int y = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество столбцов массива - ");
+// int t = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите нижнее значение диапазона случайных чисел для наполнения массива - ");
+// int q = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите верхнее значение диапазона случайных чисел для наполнения массива - ");
+// int w = Convert.ToInt32(Console.ReadLine());
+// int [,]wert=new int[y,t];
+// FillArray(wert, q, w);
+// Print(wert);
+// for (int k=0; k<wert.GetLength(0); k++)
+// {
+//     for (int l=0; l<wert.GetLength(1); l++)
+//     {
+//         int sum=wert[k,l];
+//         for (int e=l+1;e<wert.GetLength(1); e++)
+//         {
+//             if (sum<wert[k,e])
+//             {
+//                 int temp=wert[k,l];
+//                 wert[k,l]=wert[k,e];
+//                 wert[k,e]=temp;
+//             }
+//         }
+//     }
+// }
+// Console.WriteLine(" ");
+// Print(wert);
 
 
 
@@ -111,41 +111,46 @@ Print(wert);
 // 18 20
 // 15 18
 
-// Console.Write("Введите количество строк массива - ");
-// int y = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите количество столбцов массива - ");
-// int t = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите нижнее значение диапазона случайных чисел для наполнения массива - ");
-// int q = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите верхнее значение диапазона случайных чисел для наполнения массива - ");
-// int w = Convert.ToInt32(Console.ReadLine());
-// int [,]wert=new int[y,t];
-// int [,]arr=new int [y,t];
-// int [,]war=new int [y,t];
-// FillArray(wert, q, w);
-// FillArray(arr, q, w);
-// Print(wert);
-// Console.WriteLine(" ");
-// Print(arr);
-// int temp2=0;
-// int s=0;
-// int v=0;
-// for (int k=0; k<wert.GetLength(0); k++)
-// {
-//     for (int l=0;l<wert.GetLength(1); l++)
-//     {
-//         int temp1=wert[k,l]*arr[l,k];
-//         temp2=temp2+temp1;
-//         if (l==wert.GetLength(0))
-//         {
-//             war[s,v]=temp2;
-//             temp2=0;
-//             Console.Write($"{war[s,v]}");
-//             s++;
-//         }
-//         Console.WriteLine($"{temp2}");
-//     }
-// }
+Console.Write("Введите количество строк массива - ");
+int y = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов массива - ");
+int t = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите нижнее значение диапазона случайных чисел для наполнения массива - ");
+int q = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите верхнее значение диапазона случайных чисел для наполнения массива - ");
+int w = Convert.ToInt32(Console.ReadLine());
+int [,]wert=new int[y,t];
+int [,]arr=new int [y,t];
+int [,]war=new int [y,t];
+FillArray(wert, q, w);
+FillArray(arr, q, w);
+Print(wert);
+Console.WriteLine(" ");
+Print(arr);
+
+for (int k=0; k<wert.GetLength(1); k++)
+{
+    int b=-1;
+    for (int z=0; z<wert.GetLength(0); z++)
+    {
+        int j=0;
+        b++;
+        int factor=0;
+        for (int i=0; i<wert.GetLength(1); i++)
+        {
+            factor=wert[z,j]*arr[j,z];
+            j++;
+            war[b,k]=war[b,k]+factor;
+        }
+    }
+}
+Console.WriteLine(" ");
+Print(war);
+
+
+
+
+//war[i,k]=wert[i,k]*arr[i,k]+wert[i,k+1]*arr[i+1,k];
 
 
 
